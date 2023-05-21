@@ -19,6 +19,12 @@ public class UserController {
     @Autowired
     private AuthenticationService authenticationService;
 
+    @GetMapping("/home")
+    public String welcomePage(){
+        return "Welcome to Expense Tracker Application..!!";
+    }
+
+
     @PostMapping("/signup")
     public ResponseEntity<String> signUp(@Valid @RequestBody User user){
         return userService.signUp(user);

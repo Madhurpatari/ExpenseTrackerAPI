@@ -80,7 +80,7 @@ public class ExpenseController {
         return new ResponseEntity<>(expense , status);
     }
 
-    //Delete expense by authenticate user
+    //Delete expense by an expense id and  authenticate user
     @DeleteMapping("/{expenseId}")
     public ResponseEntity<Void> deleteExpense(@PathVariable Long expenseId,@RequestParam String email , @RequestParam String token) {
         HttpStatus status;
